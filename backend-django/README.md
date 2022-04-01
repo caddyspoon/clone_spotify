@@ -91,3 +91,23 @@ SECRET_KEY = get_secret("SECRET_KEY")
 
 ## 2. Django-MySQL 연동하기
 
+### 1. 테이블 만들기
+
+```bash
+# MySQL Server 실행
+$ mysql.server start
+
+# MySQL 실행; -u: user_id | -p: password, 빈칸으로 둔 뒤 입력 가능
+$ mysql -u <user_id> -p <blank or password>
+```
+
+```sql
+# DB 생성
+mysql> create database <DATABASE_NAME> character set utf8mb4 collate utf8mb4_general_ci;
+
+# 생성된 DB 확인
+mysql> show databases;
+
+# DB 선택
+mysql> use <DATABASE_NAME>;
+```
