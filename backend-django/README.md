@@ -111,3 +111,27 @@ mysql> show databases;
 # DB 선택
 mysql> use <DATABASE_NAME>;
 ```
+
+### 2. Django > settings.py 설정
+
+```python
+# settings.py
+# 해당 케이스는 root 경로에 잇는 secret_key.json에 있는 값을 불러오는 방식
+DATABASES = { 
+	'default': { 
+    	'ENGINE': 'django.db.backends.mysql', 
+        'NAME': get_secret("DATABASE_NAME"),
+        'USER': get_secret("DATABASE_USER"),
+        'PASSWORD': get_secret("DATABASE_PASSWORD"), 
+        'HOST': get_secret("DATABASE_HOST"), 
+        'PORT': get_secret("DATABASE_PORT"), 
+     } 
+}
+```
+
+### 3. 마이그레이션
+
+```bash
+$ python manage.py migrate
+```
+
