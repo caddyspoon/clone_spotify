@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import Route from './Route';
 
-const listener = () => {
+const App = () => {
   ReactDOM.render(
     <BrowserRouter>
       <Route />
@@ -13,4 +13,4 @@ const listener = () => {
   )
 }
 
-listener()
+App()

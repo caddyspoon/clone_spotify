@@ -3,7 +3,7 @@ import React from 'react'
 function HomePage() {
   return (
     <div>
-      <p>메인 홈 화면</p>
+      <h1>메인 홈 화면</h1>
     </div>
   )
 }

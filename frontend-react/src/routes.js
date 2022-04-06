@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 // import Navbar and Footer
 // import AdminPage from 'pages/AdminPage'
@@ -15,8 +15,8 @@ import HomePage from 'pages/HomePage'
 const routes = (
   <>
     <NavigationBar />
-    <Switch>
-      <Route exact path='/' component={HomePage} />
+    <Routes>
+      <Route path='/' element={<HomePage />} />
       {/* <Route path='/*path' component={*path} /> */}
 
 
@@ -26,7 +26,7 @@ const routes = (
 
       {/* ATTENTION! ErrorPage should always be HERE */}
       {/* <Route path='/:string' component={PageNotFoundPage} /> */}
-    </Switch>
+    </Routes>
   </>
 )
 
