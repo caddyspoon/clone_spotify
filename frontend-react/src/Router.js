@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom'
 
 // import Navbar and Footer
 // import AdminPage from 'pages/AdminPage'
-import NavigationBar from 'pages/NavigationBar'
 // import Footer from 'pages/Footer'
 
 // Pages
@@ -12,9 +11,8 @@ import HomePage from 'pages/HomePage'
 
 // Components
 
-const routes = (
+const Router() = (
   <>
-    <NavigationBar />
     <Routes>
       <Route path='/' element={<HomePage />} />
       {/* <Route path='/*path' component={*path} /> */}
